@@ -1,0 +1,29 @@
+{
+  "name": "teamgenerator",
+  "version": "1.0.0",
+  "description": "creates a basic info on the members of your team",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbsanders5/teamgenerator.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "Timothy Sanders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbsanders5/teamgenerator/issues"
+  },
+  "homepage": "https://github.com/tbsanders5/teamgenerator#readme",
+
+  "dependencies": {
+    "cheerio": "1.0.0-rc.3",
+    "inquirer": "7.3.3",
+    "jest": "26.4.2",
+    "open": "7.2.1"
+  }
+}
