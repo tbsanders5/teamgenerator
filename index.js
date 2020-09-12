@@ -101,5 +101,20 @@ function gatherEmployeeInfo(retFunction) {
 
 }
 
+function createEmployee() {
+    inquire
+        .prompt(firstQuestion)
+        .then(function (response) {
+            if (response.addingEmployee)
+                gatherEmployeeInfo(createEmployee);
+                else
+                generateHtml();
+        });
+}
+
+
+
+
+
 
 
