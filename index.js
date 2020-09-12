@@ -71,6 +71,35 @@ const userPrompt = [
         when: function (answers) {
             return answers.employeeRole === 'Engineer'
         }
-    }
+    },
 ]
+
+function gatherEmployeeInfo(retFunction) {
+
+    inquire
+        .prompt(userPrompt)
+        .then(function (response) {
+
+            employeeID += 1;
+
+            let user;
+
+            if (response.employeeRole === 'Manager') {
+                user = new manager(response.employeeName, employeeID, response.employeeEmail, response.employeeOffice);
+            } else if (response.employeeRole === 'Engineer') {
+                user = new engineer(response.employeeName, employeeID, response.employeeEmail, response.employeeGithub);
+            } else if (response.employeeRole === 'Intern') {
+                user = new intern(response.employeeName, employeeID, response.employeeEmail, response.employeeSchool);
+            } else if (response.employeeRole === 'Employee') {
+                user = new employee(response.employeeName, employeeID, response.employeeEmail);
+            }
+
+            employees.push(user);
+
+            retFunction();
+        });
+
+}
+
+
 
