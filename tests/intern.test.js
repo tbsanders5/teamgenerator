@@ -12,7 +12,7 @@ test('school is populated', () => {
 });
 
 test('intern role populated', () => {
-    const internRole = 'intern';
+    const internRole = 'Intern';
     const internElement = new intern();
     expect(internElement.getRole()).toBe(internRole);
 });
